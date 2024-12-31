@@ -1,0 +1,97 @@
+/* Dashboard Container */
+.dashboard-container {
+  background-color: #f4f4f9;
+  min-height: 100vh;
+  display: flex;
+  font-family: "Arial", sans-serif;
+}
+
+/* Main Content Area */
+.dashboard-main-content {
+  background-color: #ffffff;
+  padding: 20px;
+  overflow-x: auto;
+}
+
+/* Content Section */
+.dashboard-content {
+  padding: 20px;
+}
+
+/* Cards */
+.dashboard-card {
+  height: 150px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Specific Card Colors */
+.dashboard-card-primary {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+}
+
+.dashboard-card-success {
+  background: linear-gradient(135deg, #28a745, #1c7430);
+}
+
+.dashboard-card-warning {
+  background: linear-gradient(135deg, #ffc107, #cc9900);
+}
+
+.dashboard-card-danger {
+  background: linear-gradient(135deg, #dc3545, #a71d2a);
+}
+
+/* Card Body */
+.dashboard-card-body {
+  padding: 15px;
+}
+
+.dashboard-card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.dashboard-card-text {
+  font-size: 1.2rem;
+}
+
+/* Graph Card */
+.dashboard-graph-card {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.dashboard-graph-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.dashboard-chart-placeholder {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border: 1px dashed #ccc;
+  color: #666;
+  font-size: 1rem;
+}
+
+.dashboard-chart-placeholder p {
+  margin: 0;
+}

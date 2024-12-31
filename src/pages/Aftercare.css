@@ -1,0 +1,47 @@
+.aftercare-section {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  .card-header {
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .card {
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-body ul {
+    padding-left: 0;
+  }
+  
+  .card-body li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .card-body li:last-child {
+    border-bottom: none;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+  
+  .text-primary {
+    color: #007bff !important;
+  }
+  
+  .text-danger {
+    color: #dc3545 !important;
+  }
+  

@@ -1,0 +1,63 @@
+.book-appointment {
+    background: linear-gradient(to top, #004aad, #ffffff);
+    color: #333;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .title {
+    color: #004aad;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .booking-info, .confirmation-policy, .steps, .payment-details {
+    border: 1px solid #eaeaea;
+  }
+  
+  .booking-info h3,
+  .confirmation-policy h3,
+  .steps h3,
+  .payment-details h3 {
+    font-weight: bold;
+  }
+  
+
+  
+  .list-group-item {
+    border: none;
+    background: none;
+  }
+  
+
+
+  .book-appointment {
+    background: linear-gradient(to top, #004aad, #ffffff);
+    color: #333;
+    min-height: 100vh;
+    padding: 2rem 0;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, #ff7eb3, #ff758c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .modal-header {
+    background: #ff758c;
+    color: #fff;
+  }
+  
+  .modal-footer button {
+    min-width: 100px;
+  }
+  
+  .border {
+    border: 1px solid #ddd;
+  }
+  

@@ -1,0 +1,50 @@
+.cart-container {
+    padding: 20px;
+  }
+  
+  .service-img img, .employee-img img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  button {
+    width: 100px;
+  }
+  
+  button.ms-2 {
+    margin-left: 15px;
+  }
+  
+  .card-header {
+    background-color: #f8f9fa;
+  }
+  
+  .card-body {
+    font-size: 1rem;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  
+  .fw-bold {
+    font-weight: bold;
+  }
+  
+  .text-primary {
+    color: #007bff;
+  }
+  
+  @media (max-width: 768px) {
+    .service-img img, .employee-img img {
+      width: 60px;
+      height: 60px;
+    }
+  
+    .card-body {
+      font-size: 0.9rem;
+    }
+  }
+  

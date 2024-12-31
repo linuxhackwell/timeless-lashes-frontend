@@ -1,0 +1,113 @@
+/* Service Card */
+.service-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%; /* Ensure cards adapt to column width */
+  max-width: 400px; /* Optional: Set a maximum width */
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  padding: 10px; /* Add some padding */
+}
+
+/* Hover and Selected States */
+.service-card:hover,
+.service-card.selected {
+  border: 2px solid #007bff;
+  background-color: #f8f9fa;
+}
+
+/* Image Styling */
+.card-image img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 15px;
+}
+
+/* Align Radio Button with Card Content */
+.service-card .form-check {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  border: 2px solid black;
+}
+
+.service-card .form-check-input {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Optional: Style Selected Card */
+.service-card.selected {
+  border: 2px solid #007bff;
+  background-color: #f8f9fa;
+}
+
+/* Custom Radio Button Style */
+.service-card .form-check-input {
+  border: 2px solid black; /* Add black border */
+  background-color: transparent; /* Transparent background */
+  appearance: none; /* Remove default styles */
+  width: 20px; /* Set custom size */
+  height: 20px;
+  border-radius: 50%; /* Make it circular */
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-card .form-check-input:checked {
+  background-color: black; /* Black fill when selected */
+  border-color: black; /* Retain black border */
+}
+
+
+
+.confirm-button-wrapper {
+  position: absolute;
+  bottom: 10px; /* Adjust to your preference */
+  right: 10px; /* Align with the Next arrow */
+}
+
+.confirm-button {
+  /* Optional styling for better visibility */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.confirm-button:hover {
+  transform: scale(1.05);
+}
+
+.confirmation-details .card {
+  border-radius: 15px;
+}
+
+.confirmation-details .card img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+
+
+/* Row Spacing */
+#card-flex {
+  justify-content: center;
+}
+
+/* Adjust Card Layout Responsiveness */
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column; /* Stack image and text vertically on small screens */
+    align-items: center;
+  }
+
+  .card-image img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
