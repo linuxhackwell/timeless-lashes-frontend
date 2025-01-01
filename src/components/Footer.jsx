@@ -55,6 +55,16 @@ const Footer = () => {
 </Col>
 
 
+{/* Admin Access Section */}
+<Col lg={3} md={6} className="mb-4">
+    <h5 className="text-gold">Admin Access</h5>
+    <div className="d-flex flex-column">
+      <a href="/admin/login" className="mb-2">Admin Login</a>
+      <a href="/admin/register" className="">Admin Register</a>
+    </div>
+  </Col>
+
+
           {/* Social Media and Newsletter */}
           <Col lg={3} md={6} className="mb-4">
             <h5 className="text-gold">Stay Connected</h5>
