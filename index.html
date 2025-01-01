@@ -14,14 +14,7 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx">
-      // Redirect all 404 requests to index.html
-      (function () {
-        const path = window.location.pathname;
-        const is404 = !document.querySelector(`[src="${path}"]`) && !document.querySelector(`[href="${path}"]`);
-        if (is404 && path !== '/') {
-          window.history.replaceState({}, '', '/');
-        }
-      })();
+      
     </script>
   </body>
 </html>
