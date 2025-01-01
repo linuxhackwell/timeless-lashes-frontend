@@ -14,7 +14,7 @@ import BookAppointment from './pages/BookAppointment';
 import Home from './pages/Home';
 import Cart from './pages/Cart';
 import Checkout from './pages/checkout';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
 // Admin components
 import Dashboard from './Admin/AdminDashboard';
 import Appointments from './Admin/Appointments';
@@ -25,6 +25,7 @@ import Profile from './Admin/Profile';
 import Settings from './Admin/Settings';
 import Register from './Admin/Register';
 import Login from './Admin/Login';
+import Admin from './Admin/Admin'; // Import the new Admin component
 
 function App() {
   return (
@@ -36,24 +37,22 @@ function App() {
 
 const AppLayout = () => {
   const location = useLocation();
-  
+
   // Check if the current route is an admin route
   const isAdminRoute = location.pathname.startsWith('/admin');
 
   const PrivateRoute = ({ element, redirectTo }) => {
     const token = localStorage.getItem("adminToken");
     const tokenExpiration = localStorage.getItem("adminTokenExpiration");
-  
+
     if (!token || Date.now() > tokenExpiration) {
       localStorage.removeItem("adminToken");
       localStorage.removeItem("adminTokenExpiration");
       return <Navigate to={redirectTo} />;
     }
-  
+
     return element;
   };
-  
-  
 
   return (
     <div className="app-layout">
@@ -79,40 +78,41 @@ const AppLayout = () => {
           <Route path="/book-appointment/checkout" element={<Checkout />} />
 
           {/* Admin Routes */}
-        <Route path="/admin/register" element={<Register />} />
-        <Route path="/admin/login" element={<Login />} />
-        <Route
-          path="/admin/dashboard"
-          element={<PrivateRoute element={<Dashboard />} redirectTo="/admin/login" />}
-        />
-        <Route
-          path="/admin/appointments"
-          element={<PrivateRoute element={<Appointments />} redirectTo="/admin/login" />}
-        />
-        <Route
-          path="/admin/services"
-          element={<PrivateRoute element={<Services />} redirectTo="/admin/login" />}
-        />
-        <Route
-          path="/admin/employees"
-          element={<PrivateRoute element={<AdminEmployees />} redirectTo="/admin/login" />}
-        />
-        <Route
-          path="/admin/classes"
-          element={<PrivateRoute element={<AdminClasses />} redirectTo="/admin/login" />}
-        />
-        <Route
-          path="/admin/profile"
-          element={<PrivateRoute element={<Profile />} redirectTo="/admin/login" />}
-        />
-        <Route
-          path="/admin/settings"
-          element={<PrivateRoute element={<Settings />} redirectTo="/admin/login" />}
-        />
+          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin/register" element={<Register />} />
+          <Route path="/admin/login" element={<Login />} />
+          <Route
+            path="/admin/dashboard"
+            element={<PrivateRoute element={<Dashboard />} redirectTo="/admin/login" />}
+          />
+          <Route
+            path="/admin/appointments"
+            element={<PrivateRoute element={<Appointments />} redirectTo="/admin/login" />}
+          />
+          <Route
+            path="/admin/services"
+            element={<PrivateRoute element={<Services />} redirectTo="/admin/login" />}
+          />
+          <Route
+            path="/admin/employees"
+            element={<PrivateRoute element={<AdminEmployees />} redirectTo="/admin/login" />}
+          />
+          <Route
+            path="/admin/classes"
+            element={<PrivateRoute element={<AdminClasses />} redirectTo="/admin/login" />}
+          />
+          <Route
+            path="/admin/profile"
+            element={<PrivateRoute element={<Profile />} redirectTo="/admin/login" />}
+          />
+          <Route
+            path="/admin/settings"
+            element={<PrivateRoute element={<Settings />} redirectTo="/admin/login" />}
+          />
         </Routes>
 
-          {/* Render Footer only for non-admin routes */}
-          {!isAdminRoute && <Footer />}
+        {/* Render Footer only for non-admin routes */}
+        {!isAdminRoute && <Footer />}
       </div>
     </div>
   );
