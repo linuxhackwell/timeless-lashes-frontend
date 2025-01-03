@@ -61,7 +61,7 @@ const ServicesSection = () => {
                 <div
                   className="service-image"
                   style={{
-                    backgroundImage: `url(${import.meta.env.VITE_API_BASE_URL}/${service.image})`, // Use the exact path
+                    backgroundImage: `url(${import.meta.env.VITE_API_BASE_URL}/uploads/${service.image})`, // Use the exact path
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                     height: '200px',
