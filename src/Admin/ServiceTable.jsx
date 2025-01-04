@@ -10,6 +10,7 @@ const ServiceTable = ({ services, onEdit, onDelete }) => {
       <table className="table table-striped table-hover align-middle">
         <thead className="table-dark">
           <tr>
+            <th>Image</th>
             <th>Name</th>
             <th>Description</th>
             <th>Price</th>
@@ -19,6 +20,14 @@ const ServiceTable = ({ services, onEdit, onDelete }) => {
         <tbody>
           {services.map((service) => (
             <tr key={service._id}>
+              <td>
+                <img
+                  src={`${import.meta.env.VITE_API_BASE_URL}/uploads/${service.image}`}
+                  alt={service.name}
+                  className="img-thumbnail"
+                  style={{ width: '80px', height: 'auto' }}
+                />
+              </td>
               <td>{service.name}</td>
               <td>{service.description}</td>
               <td>Ksh.{service.price.toFixed(2)}</td>

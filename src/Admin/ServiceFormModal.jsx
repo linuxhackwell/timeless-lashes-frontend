@@ -9,13 +9,21 @@ const ServiceFormModal = ({ service, onClose, onSave }) => {
     image: null, // For the image file
   });
 
+  const [previewImage, setPreviewImage] = useState(
+    service?.image
+      ? `${import.meta.env.VITE_API_BASE_URL}/uploads/${service.image}`
+      : null
+  );
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
   const handleFileChange = (e) => {
-    setFormData({ ...formData, image: e.target.files[0] });
+    const file = e.target.files[0];
+    setFormData({ ...formData, image: file });
+    setPreviewImage(URL.createObjectURL(file));
   };
 
   const handleSubmit = async (e) => {
@@ -121,6 +129,16 @@ const ServiceFormModal = ({ service, onClose, onSave }) => {
                   className="form-control"
                   accept="image/*"
                 />
+                {previewImage && (
+                  <div className="mt-3">
+                    <img
+                      src={previewImage}
+                      alt="Preview"
+                      className="img-thumbnail"
+                      style={{ width: '150px', height: 'auto' }}
+                    />
+                  </div>
+                )}
               </div>
               <div className="d-flex justify-content-end">
                 <button type="submit" className="btn btn-primary me-2">

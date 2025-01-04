@@ -10,6 +10,7 @@ const EmployeeTable = ({ employees, onEdit, onDelete }) => {
       <table className="table table-striped table-hover align-middle">
         <thead className="table-dark">
           <tr>
+            <th>Profile Picture</th>
             <th>Name</th>
             <th>Email</th>
             <th>Phone</th>
@@ -20,6 +21,22 @@ const EmployeeTable = ({ employees, onEdit, onDelete }) => {
         <tbody>
           {employees.map((employee) => (
             <tr key={employee._id}>
+              <td>
+                <img
+                  src={`${import.meta.env.VITE_API_BASE_URL}${employee.profilePicture}`}
+                  alt={employee.name}
+                  className="rounded-circle"
+                  style={{
+                    width: '50px',
+                    height: '50px',
+                    objectFit: 'cover',
+                    border: '2px solid #ddd',
+                  }}
+                  onError={(e) => {
+                    e.target.src = '/placeholder-profile.png'; // Fallback image path
+                  }}
+                />
+              </td>
               <td>{employee.name}</td>
               <td>{employee.email}</td>
               <td>{employee.phone}</td>
