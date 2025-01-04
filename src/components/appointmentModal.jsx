@@ -181,7 +181,7 @@ const AppointmentModal = ({ show, onClose }) => {
                     />
                     <div className="card-image">
                       {/* Use proper concatenation for image URL */}
-                      <img src={`${import.meta.env.VITE_API_BASE_URL}/${service.image}`} alt={service.name} />
+                      <img src={`${import.meta.env.VITE_API_BASE_URL}${service.image}`} alt={service.name} />
                     </div>
                   </div>
                   <Card.Body>
