@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./HeroSection.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import HeroImage from "../assets/Timelesslashes.jpeg"; // Import image directly
+import HeroImage from "../assets/Timelesslashes.jpg"; // Import image directly
 
 const HeroSection = () => {
   const navigate = useNavigate();
