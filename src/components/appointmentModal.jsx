@@ -219,7 +219,7 @@ const AppointmentModal = ({ show, onClose }) => {
                     <div className="card-image">
               {/* Correctly build the image URL */}
               <img
-                src={`${import.meta.env.VITE_API_BASE_URL}/uploads/${employee.profilePicture}`}
+                src={`${import.meta.env.VITE_API_BASE_URL}${employee.profilePicture}`}
                 alt={employee.name}
               />
             </div>
