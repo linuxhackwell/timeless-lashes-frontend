@@ -22,7 +22,7 @@ const ServiceTable = ({ services, onEdit, onDelete }) => {
             <tr key={service._id}>
               <td>
                 <img
-                  src={`${import.meta.env.VITE_API_BASE_URL}/uploads/${service.image}`}
+                  src={`${import.meta.env.VITE_API_BASE_URL}${service.image}`}
                   alt={service.name}
                   className="img-thumbnail"
                   style={{ width: '80px', height: 'auto' }}
